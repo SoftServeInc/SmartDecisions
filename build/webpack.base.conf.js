@@ -7,19 +7,18 @@ const webpack = require('webpack');
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
-const DIST = path.join(__dirname, '../dist');
+const DIST = path.join(__dirname, '../docs');
 const SOURCE = path.join(__dirname, "../src");
 
 module.exports = {
   // BASE config
   entry: {
-    app: SOURCE,
-    module: path.join(SOURCE, "index.js"),
+    app: SOURCE
   },
   output: {
-    filename: "[name].[hash].js",
-    path: path.join(DIST, "js"),
-    publicPath: '/'
+    path: DIST,
+    publicPath: '',
+    filename: 'js/bundle.js'
   },
   optimization: {
     splitChunks: {
@@ -57,7 +56,7 @@ module.exports = {
         {
           loader: MiniCssExtractPlugin.loader,
           options: {
-            // publicPath: '../',
+            publicPath: '../',
             hmr: process.env.NODE_ENV === 'development'
           }
         },
@@ -76,7 +75,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: path.join("../", "css", "[name].[hash].css"),
+      filename: path.join("css", "[name].[hash].css"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: path.join(DIST, "index.html"),
+      template: 'src/index.html'
     }),
     new CopyWebpackPlugin([
       { from: path.join(SOURCE, "assets", "img"), to: path.join(DIST, "img") },

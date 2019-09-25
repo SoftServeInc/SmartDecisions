@@ -24,6 +24,12 @@ body {
   }
 }
 
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 29px;
+}
+
 .btn-rounded {
   flex: 0 0 243px;
   font-size: 18px;
@@ -195,14 +201,37 @@ section.about {
       font-size: 14px;
     }
 
-    img {
+    .about-img {
+      display: flex;
+      height: 165px;
+      padding-bottom: 10px;
+    }
 
+    .card-item {
+      &:first-child img {
+        width: 112px;
+        padding-top: 59px;
+      }
+
+      &:nth-child(2) img {
+        width: 121px;
+      }
+
+      &:nth-child(3) img {
+        width: 87px;
+        padding-top: 51px;
+      }
+
+      &:nth-child(4) img {
+        width: 100px;
+        padding-top: 21px;
+      }
     }
   }
 }
 
 section.instruction {
-  padding-top: 50px;
+  padding: 50px 15px 0;
 
   .title {
     color: #d60053;
@@ -282,38 +311,19 @@ section.benefits {
     color: #94308e;
   }
 
-  ul li {
-    list-style-type: none;
-    position: relative;
-    padding: 22px 0;
-    line-height: 1;
-    font-size: 18px;
-    font-family: "OpenSans";
+  ul {
+    padding-left: 0;
 
-    &:before {
-      position: absolute;
-      content: "";
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      top: 50%;
-      left: 10px;
-    }
+    li {
+      list-style-type: none;
+      padding: 22px 0;
+      line-height: 1;
+      font-size: 18px;
+      font-family: "OpenSans";
 
-    &:first-child:before {
-      background: url('../img/icon.png');
-    }
-
-    &:nth-child(2):before {
-      background: url('../img/icon.png');
-    }
-
-    &:nth-child(3):before {
-      background: url('../img/icon.png');
-    }
-
-    &:last-child:before {
-      background: url('../img/icon.png');
+      img {
+        padding-right: 20px;
+      }
     }
   }
 

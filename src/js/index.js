@@ -21,9 +21,10 @@ $(document).ready(function(){
   $('.burder-menu').on('click', function() {
     $(this).parent().addClass('active');
     $(this).addClass('d-none');
-  })
+    $('header .close-icon.d-none').removeClass('d-none');
+  });
 
-  $('.navbar-nav .nav-link').click(function(e){
+  $('.navbar-nav .nav-link, .close-icon').click(function(e){
     $('.navbar.active').removeClass('active');
     $('.navbar-collapse.show').removeClass('show');
   });
