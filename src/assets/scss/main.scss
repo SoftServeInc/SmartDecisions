@@ -514,7 +514,6 @@ section.contributors {
   transform: translateX(0);
 }
 
-
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
@@ -531,7 +530,8 @@ section.contributors {
     justify-content: center;
 
     .nav-item {
-      width: 115px;
+      width: 95px;
+      font-size: 16px;
     }
   }
 

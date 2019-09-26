@@ -38,16 +38,23 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/,
+      test: /\.(png|svg)$/,
       loader: 'url-loader',
       options: {
         limit: 1000,
         name: '[name].[ext]',
         fallback: 'file-loader',
-        outputPath: path.join(DIST, 'img'),
+        outputPath: '/img',
         publicPath: '../img'
       }
     }, {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      loader: 'url-loader',
+      options: {
+        limit: 1000,
+        name: '[name].[ext]',
+      }
+    },{
       test: /\.s?css$/,
       use: [
         'style-loader',
