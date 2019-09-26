@@ -8,6 +8,10 @@ body {
   max-width: 944px;
 }
 
+.bg-pattern {
+  background-image: url("../img/background.svg");
+}
+
 .burder-menu {
   position: absolute;
   width: 20px;
@@ -99,8 +103,8 @@ nav.navbar.navbar-expand-lg {
       color: #000;
       line-height: 1;
 
-      &:last-child {
-        border-right: 0;
+      &:nth-child(4) {
+        border-right: none;
         padding-right: 0;
       }
 
@@ -259,7 +263,7 @@ section.cards {
     color: #5854a1;
   }
   .nav-tabs {
-    width: 416px;
+    max-width: 416px;
     margin: 64px auto 84px;
     font-size: 18px;
     font-weight: 900;
@@ -458,18 +462,94 @@ section.contributors {
     }
   }
 }
+.top-carousel {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 570px;
+
+  margin: 32px auto 55px;
+
+  .item-wrapper {
+     flex: 3 3 165px;
+
+     &:first-child {
+       margin-right: -30px;
+       overflow: hidden;
+     }
+
+     &:nth-child(2) {
+       z-index: 2;
+       flex: 5 5 195px;
+     }
+
+    &:last-child {
+      margin-left: -30px;
+      overflow: hidden;
+    }
+  }
+}
+
 
 .carousel-inner .carousel-item-right.active,
 .carousel-inner .carousel-item-next {
-  transform: translateX(33.33%);
+  transform: translateX(33%);
 }
 
 .carousel-inner .carousel-item-left.active,
 .carousel-inner .carousel-item-prev {
-  transform: translateX(-33.33%)
+  transform: translateX(-33%)
 }
 
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left{
   transform: translateX(0);
+}
+
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  section .title {
+    font-size: 38px;
+  }
+  
+  section.cards .nav-tabs {
+    display: flex;
+    justify-content: center;
+
+    .nav-item {
+      width: 115px;
+    }
+  }
+
+  section.benefits {
+    ul li img {
+      padding-right: 5px;
+      width: 35px;
+    }
+
+    .cards img {
+      width: 90%;
+    }
+  }
+
+  .top-carousel {
+    .item-wrapper {
+       &:first-child {
+         margin-right: -40px;
+       }
+
+       &:nth-child(2) {
+       }
+
+      &:last-child {
+        margin-left: -40px;
+      }
+    }
+  }
 }

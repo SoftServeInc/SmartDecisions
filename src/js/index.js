@@ -1,26 +1,10 @@
 // Main js file
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 
-
-// $('.carousel .carousel-item').each(function(){
-//   var next = $(this).next();
-//   if (!next.length) {
-//     next = $(this).siblings(':first');
-//   }
-//   next.children(':first-child').clone().appendTo($(this));
-//
-//   if (next.next().length>0) {
-//     next.next().children(':first-child').clone().appendTo($(this));
-//   }
-//   else {
-//     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-//   }
-// });
-
 $(document).ready(function(){
   $('.burder-menu').on('click', function() {
-    $(this).parent().addClass('active');
     $(this).addClass('d-none');
+    $(this).parent().addClass('active');
     $('header .close-icon.d-none').removeClass('d-none');
   });
 
