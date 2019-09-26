@@ -1,6 +1,3 @@
-// Main js file
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
-
 $(document).ready(function(){
   $('.burder-menu').on('click', function() {
     $(this).addClass('d-none');
@@ -19,4 +16,16 @@ $(document).ready(function(){
       scrollTop : $('body').find($(this).attr('href')).offset().top
     },1000);
   });
+
+  $('.tab-pane .next').on('click', function() {
+    copy = $(this).closest('.tab-pane').find('.content .row img').first();
+    $('.content .row').append(copy);
+    copy.html('');
+  })
+
+  $('.tab-pane .previous').on('click', function() {
+    previous = $(this).closest('.tab-pane').find('.content .row img').last();
+    $('.content .row').prepend(previous);
+    previous.html('');
+  })
 });

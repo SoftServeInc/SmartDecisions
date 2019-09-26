@@ -436,6 +436,10 @@ section.contributors {
 }
 
 @media (max-width: 992px) {
+  .bg-pattern {
+    background-size: cover;
+  }
+
   .navbar.active {
     height: 100%;
     position: fixed;
@@ -498,28 +502,6 @@ section.contributors {
   }
 }
 
-
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-  transform: translateX(33%);
-}
-
-.carousel-inner .carousel-item-left.active,
-.carousel-inner .carousel-item-prev {
-  transform: translateX(-33%)
-}
-
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{
-  transform: translateX(0);
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-}
-
 @media (max-width: 600px) {
   section .title {
     font-size: 38px;
@@ -559,5 +541,45 @@ section.contributors {
         margin-left: -40px;
       }
     }
+  }
+}
+
+.tab-pane {
+  overflow: hidden;
+  position: relative;
+
+  .row {
+    flex-wrap: nowrap;
+    transform: translateX(-12.5%);
+
+    .tab-card {
+    }
+  }
+}
+
+.controlls {
+  .next, .previous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: black;
+    width: 12.5%;
+    transition: all 0.5s;
+
+    &:hover {
+      background: #0000007a;
+    }
+  }
+
+  .previous img {
+    transform: rotate(180deg);
+  }
+
+  .next {
+    right: 0;
+    height: 100%;
   }
 }
