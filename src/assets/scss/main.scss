@@ -9,7 +9,8 @@ body {
 }
 
 .bg-pattern {
-  background-image: url("../img/background.svg");
+  background: url("../img/background.png") top center repeat;
+  background-size: contain;
 }
 
 .burder-menu {
