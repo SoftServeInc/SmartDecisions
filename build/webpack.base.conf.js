@@ -38,16 +38,14 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/, loader: 'url-loader?limit=100000',
-      loader: 'url-loader?limit=100000',
+      test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/,
+      loader: 'url-loader',
       options: {
-        name: '[name].[ext]'
-      }
-    }, {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
+        limit: 1000,
+        name: '[name].[ext]',
+        fallback: 'file-loader',
+        outputPath: path.join(DIST, 'img'),
+        publicPath: '../img'
       }
     }, {
       test: /\.s?css$/,
