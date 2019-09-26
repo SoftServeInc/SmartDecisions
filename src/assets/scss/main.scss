@@ -294,20 +294,17 @@ section.cards {
       line-height: 1;
       border: 1px solid #fff;
       color: #fff;
+      border-radius: 0;
 
       &.active {
         color: #000;
       }
 
-      &#home-tab {
+      &#ml-tab {
         border-radius: 60px 0 0 60px;
       }
 
-      &#profile-tab {
-        border-radius: 0;
-      }
-
-      &#contact-tab {
+      &#iot-tab {
         border-radius: 0 60px 60px 0;
       }
     }
