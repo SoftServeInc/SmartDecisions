@@ -120,6 +120,11 @@ nav.navbar.navbar-expand-lg {
     padding-right: 46px;
     padding-left: 46px;
     margin-left: auto;
+    text-decoration: none;
+
+    &:active, &:hover {
+      color: #fff;
+    }
   }
 }
 
@@ -366,6 +371,11 @@ section.benefits {
   .btn-rounded {
     background: #94308e;
     width: 249px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -517,7 +527,7 @@ section.contributors {
   section .title {
     font-size: 38px;
   }
-  
+
   section.cards .nav-tabs {
     display: flex;
     justify-content: center;
