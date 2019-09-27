@@ -4,10 +4,6 @@ body {
   font-family: "proxima-nova";
 }
 
-.container {
-  max-width: 944px;
-}
-
 .bg-pattern {
   background: url("../img/background.png") top center repeat;
   background-size: contain;
@@ -268,6 +264,7 @@ section.cards {
   h2 {
     color: #5854a1;
   }
+
   .nav-tabs {
     max-width: 416px;
     margin: 64px auto 84px;
@@ -306,6 +303,62 @@ section.cards {
 
       &#iot-tab {
         border-radius: 0 60px 60px 0;
+      }
+    }
+  }
+
+  .tab-pane {
+    overflow: hidden;
+    position: relative;
+
+    .content {
+      position: relative;
+
+      .row.card-container {
+        position: relative;
+        flex-wrap: nowrap;
+        left: -12.5%;
+
+        .tab-card {
+          position: relative;
+
+
+          &.previous {
+            left: -12.5%;
+          }
+
+          &.next {
+            right: -12.5%;
+          }
+        }
+      }
+    }
+
+    .controlls {
+      .next, .previous {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background: black;
+        width: 12.5%;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          background: #0000007a;
+        }
+      }
+
+      .previous img {
+        transform: rotate(180deg);
+      }
+
+      .next {
+        right: 0;
+        height: 100%;
       }
     }
   }
@@ -502,6 +555,20 @@ section.contributors {
   }
 }
 
+@media (max-width: 768px) {
+  section.cards .tab-pane {
+    .content .row.card-container {
+      left: -25%;
+    }
+
+    .controlls {
+      .next, .previous {
+        width: 25%;
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   section .title {
     font-size: 38px;
@@ -541,67 +608,5 @@ section.contributors {
         margin-left: -40px;
       }
     }
-  }
-}
-
-.tab-pane {
-  overflow: hidden;
-  position: relative;
-
-  .row {
-    flex-wrap: nowrap;
-
-    .tab-card {
-    }
-  }
-}
-
-.content {
-  position: relative;
-
-  .row {
-    position: relative;
-    left: -12.5%;
-
-    .col-3 {
-      position: relative;
-
-
-      &.previous {
-        left: -12.5%;
-      }
-
-      &.next {
-        right: -12.5%;
-      }
-    }
-  }
-}
-
-.controlls {
-  .next, .previous {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    background: black;
-    width: 12.5%;
-    transition: all 0.5s;
-    cursor: pointer;
-
-    &:hover {
-      background: #0000007a;
-    }
-  }
-
-  .previous img {
-    transform: rotate(180deg);
-  }
-
-  .next {
-    right: 0;
-    height: 100%;
   }
 }
