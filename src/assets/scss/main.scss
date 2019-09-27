@@ -42,10 +42,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 7px;
+  padding-bottom: 6px;
   border-radius: 40px;
-  line-height: 1;
   cursor: pointer;
 
   &.bg-green {
@@ -206,6 +205,7 @@ section.about {
     p {
       font-family: "OpenSans";
       font-size: 14px;
+      max-width: 160px;
     }
 
     .about-img {
@@ -490,6 +490,12 @@ section.contributors {
 }
 
 @media (max-width: 992px) {
+  section.about {
+    .card-info p {
+      max-width: 100%;
+    }
+  }
+
   .bg-pattern {
     background-size: cover;
   }
