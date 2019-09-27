@@ -18,14 +18,16 @@ $(document).ready(function(){
   });
 
   $('.tab-pane .next').on('click', function() {
-    copy = $(this).closest('.tab-pane').find('.content .row img').first();
-    $('.content .row').append(copy);
+    const parent = $(this).closest('.tab-pane');
+    const copy = parent.find('.content .row img').first();
+    parent.find('.content .row').append(copy);
     copy.html('');
   })
 
   $('.tab-pane .previous').on('click', function() {
-    previous = $(this).closest('.tab-pane').find('.content .row img').last();
-    $('.content .row').prepend(previous);
+    const parent = $(this).closest('.tab-pane');
+    const previous = parent.find('.content .row img').last();
+    parent.find('.content .row').prepend(previous);
     previous.html('');
   })
 });
