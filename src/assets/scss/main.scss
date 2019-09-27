@@ -10,11 +10,12 @@ body {
 }
 
 .burder-menu {
+  display: none;
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 15px;
-  top: 20px;
+  top: -30px;
+  right: 14px;
 
   span {
     background: #000;
@@ -347,7 +348,7 @@ section.cards {
         transition: all 0.5s;
         cursor: pointer;
 
-        &:hover {
+        &:hover, &:focus {
           background: #0000007a;
         }
       }
@@ -493,11 +494,21 @@ section.contributors {
     background-size: cover;
   }
 
-  .navbar.active {
-    height: 100%;
-    position: fixed;
-    background: #fff;
-    z-index: 100;
+  .burder-menu {
+    display: block;
+  }
+
+  .navbar {
+    // height: 0;
+    position: relative;
+    max-width: 100%;
+
+    &.active {
+      position: fixed;
+      background: #fff;
+      z-index: 100;
+      height: 100%;
+    }
   }
 
   .navbar-collapse {
@@ -510,7 +521,6 @@ section.contributors {
       position: fixed;
       width: 100%;
       height: 100%;
-      background-color: #fff;
       z-index: 100;
 
       .navbar-nav {

@@ -1,11 +1,12 @@
 $(document).ready(function(){
   $('.burder-menu').on('click', function() {
-    $(this).addClass('d-none');
-    $(this).parent().addClass('active');
+    $('.burder-menu').addClass('d-none');
+    $('header .navbar').addClass('active');
     $('header .close-icon.d-none').removeClass('d-none');
   });
 
   $('.navbar-nav .nav-link, .close-icon').click(function(e){
+    $('.burder-menu').removeClass('d-none');
     $('.navbar.active').removeClass('active');
     $('.navbar-collapse.show').removeClass('show');
   });
@@ -21,11 +22,11 @@ $(document).ready(function(){
     if ($(':animated').length) { return null };
 
     let leftStart = '-37.5%';
-    let endLeft = '-12.5%';
+    let leftEnd = '-12.5%';
 
     if($( window ).width() < 768) {
       leftStart = '-75%';
-      endLeft = '-25%';
+      leftEnd = '-25%';
     }
 
     const parent = $('.tab-pane.show');
@@ -33,19 +34,19 @@ $(document).ready(function(){
     parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
       parent.find('.content .card-container').append(copy);
       parent.find('.content .card-container img').first().remove();
-      parent.find('.content .card-container').css('left', endLeft);
+      parent.find('.content .card-container').css('left', leftEnd);
     });
   }
 
   function previous() {
     if ($(':animated').length) { return null };
 
-    let leftStart = '12.5%%';
-    let endLeft = '-12.5%';
+    let leftStart = '12.5%';
+    let leftEnd = '-12.5%';
 
     if($( window ).width() < 768) {
       leftStart = '25%';
-      endLeft = '-25%';
+      leftEnd = '-25%';
     }
 
     const parent = $('.tab-pane.show');
@@ -53,7 +54,7 @@ $(document).ready(function(){
     parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
       parent.find('.content .card-container').prepend(copy);
       parent.find('.content .card-container img').last().remove();
-      parent.find('.content .card-container').css('left', endLeft);
+      parent.find('.content .card-container').css('left', leftEnd);
     });
   }
 
