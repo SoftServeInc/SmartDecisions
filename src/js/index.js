@@ -30,11 +30,13 @@ $(document).ready(function(){
     }
 
     const parent = $('.tab-pane.show');
+    parent.find('.controlls .next').addClass('active');
     const copy = parent.find('.content .card-container img').first().clone();
     parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
       parent.find('.content .card-container').append(copy);
       parent.find('.content .card-container img').first().remove();
       parent.find('.content .card-container').css('left', leftEnd);
+      parent.find('.controlls .next').removeClass('active');
     });
   }
 
@@ -50,11 +52,13 @@ $(document).ready(function(){
     }
 
     const parent = $('.tab-pane.show');
+    parent.find('.controlls .previous').addClass('active');
     const copy = parent.find('.content .card-container img').last().clone();
     parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
       parent.find('.content .card-container').prepend(copy);
       parent.find('.content .card-container img').last().remove();
       parent.find('.content .card-container').css('left', leftEnd);
+      parent.find('.controlls .previous').removeClass('active');
     });
   }
 
