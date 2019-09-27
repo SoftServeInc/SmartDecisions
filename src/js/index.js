@@ -21,12 +21,11 @@ $(document).ready(function(){
     if ($(':animated').length) { return null };
 
     const parent = $('.tab-pane.show');
-    const containerWidth = $('.row.card-container').width();
     const copy = parent.find('.content .card-container img').first().clone();
-    parent.find('.content .card-container').animate({ left: -3*containerWidth/8}, 500, function(){
+    parent.find('.content .card-container').animate({ left: '-37.5%' }, 500, function(){
       parent.find('.content .card-container').append(copy);
       parent.find('.content .card-container img').first().remove();
-      parent.find('.content .card-container').css('left', -containerWidth/8);
+      parent.find('.content .card-container').css('left', '-12.5%');
     });
   }
 
@@ -34,12 +33,11 @@ $(document).ready(function(){
     if ($(':animated').length) { return null };
 
     const parent = $('.tab-pane.show');
-    const containerWidth = $('.row.card-container').width();
     const copy = parent.find('.content .card-container img').last().clone();
-    parent.find('.content .card-container').animate({ left: containerWidth/8}, 500, function(){
+    parent.find('.content .card-container').animate({ left: '12.5%' }, 500, function(){
       parent.find('.content .card-container').prepend(copy);
       parent.find('.content .card-container img').last().remove();
-      parent.find('.content .card-container').css('left', -containerWidth/8);
+      parent.find('.content .card-container').css('left', '-12.5%');
     });
   }
 
