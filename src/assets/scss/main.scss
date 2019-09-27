@@ -550,9 +550,30 @@ section.contributors {
 
   .row {
     flex-wrap: nowrap;
-    transform: translateX(-12.5%);
 
     .tab-card {
+    }
+  }
+}
+
+.content {
+  position: relative;
+
+  .row {
+    position: relative;
+    left: -12.5%;
+
+    .col-3 {
+      position: relative;
+
+
+      &.previous {
+        left: -12.5%;
+      }
+
+      &.next {
+        right: -12.5%;
+      }
     }
   }
 }
