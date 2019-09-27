@@ -348,7 +348,7 @@ section.cards {
         transition: all 0.5s;
         cursor: pointer;
 
-        &:hover, &:focus {
+        &:hover, &.active {
           background: #0000007a;
         }
       }
