@@ -82,8 +82,9 @@ $(document).ready(function(){
   })
 
   $("body").keydown(function(e) {
-    if (!e) e = window.event;
-    if (e.which == 37) previous();
-    if (e.which == 39) next();
+    if ($('.modal.show').length) return null;
+
+    if (e.which === 37 ) previous();
+    if (e.which === 39) next();
   })
 });

@@ -287,6 +287,7 @@ section.cards {
       padding: 0;
       text-align: center;
       margin-bottom: -2px;
+      cursor: pointer;
 
       a {
         padding: 0;
@@ -329,6 +330,7 @@ section.cards {
 
         .tab-card {
           position: relative;
+          cursor: pointer;
 
 
           &.previous {
@@ -381,9 +383,8 @@ section.cards {
         border: none;
 
         .close-icon {
-          // align-self: flex-end;
-          // padding: 20px 20px 0 0;
           position: absolute;
+          cursor: pointer;
           background: #fff;
           border-radius: 50%;
           width: 26px;
