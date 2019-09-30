@@ -427,7 +427,7 @@ section.benefits {
 
     li {
       list-style-type: none;
-      padding: 22px 0;
+      padding: 10px 0;
       line-height: 1;
       font-size: 18px;
       font-family: "OpenSans";
@@ -518,7 +518,7 @@ section.contributors {
       &.about-softserve {
         width: 100%;
         max-width: 858px;
-        margin: auto;
+        margin: 0 auto 20px;
       }
 
       a.underlined {
