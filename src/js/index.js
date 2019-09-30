@@ -11,7 +11,6 @@ $(document).ready(function(){
     $('.navbar-collapse.show').removeClass('show');
   });
 
-
   $('.navbar-nav .nav-link, .scroll').click(function(e){
     $('html, body').animate({
       scrollTop : $('body').find($(this).attr('href')).offset().top
@@ -38,12 +37,14 @@ $(document).ready(function(){
     }
 
     const parent = $('.tab-pane.show');
+    const container = parent.find('.content .card-container');
+
     parent.find('.controlls .next').addClass('active');
     const copy = parent.find('.content .card-container img').first().clone();
-    parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
-      parent.find('.content .card-container').append(copy);
-      parent.find('.content .card-container img').first().remove();
-      parent.find('.content .card-container').css('left', leftEnd);
+    container.animate({ left: leftStart }, 500, function(){
+      container.append(copy);
+      container.find('img').first().remove();
+      container.css('left', leftEnd);
       parent.find('.controlls .next').removeClass('active');
     });
   }
@@ -60,12 +61,14 @@ $(document).ready(function(){
     }
 
     const parent = $('.tab-pane.show');
+    const container = parent.find('.content .card-container');
+
     parent.find('.controlls .previous').addClass('active');
     const copy = parent.find('.content .card-container img').last().clone();
-    parent.find('.content .card-container').animate({ left: leftStart }, 500, function(){
-      parent.find('.content .card-container').prepend(copy);
-      parent.find('.content .card-container img').last().remove();
-      parent.find('.content .card-container').css('left', leftEnd);
+    container.animate({ left: leftStart }, 500, function(){
+      container.prepend(copy);
+      container.find('img').last().remove();
+      container.css('left', leftEnd);
       parent.find('.controlls .previous').removeClass('active');
     });
   }
@@ -80,8 +83,7 @@ $(document).ready(function(){
 
   $("body").keydown(function(e) {
     if (!e) e = window.event;
-    const kc = e.which;
-    if (kc == 37) previous();
-    if (kc == 39) next();
+    if (e.which == 37) previous();
+    if (e.which == 39) next();
   })
 });
