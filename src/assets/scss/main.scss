@@ -28,9 +28,10 @@ body {
 }
 
 header .close-icon {
+  display: none;
   position: absolute;
   top: 15px;
-  right: 29px;
+  right: 39px;
 }
 
 .btn-rounded {
@@ -322,6 +323,7 @@ section.cards {
 
       .row.card-container {
         position: relative;
+        align-items: center;
         flex-wrap: nowrap;
         left: -12.5%;
 
@@ -399,6 +401,11 @@ section.benefits {
 
   ul {
     padding-left: 0;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
 
     li {
       list-style-type: none;
@@ -514,6 +521,10 @@ section.contributors {
 }
 
 @media (max-width: 992px) {
+  header .close-icon {
+    display: block;
+  }
+
   section.about {
     .card-info p {
       max-width: 100%;
@@ -528,7 +539,7 @@ section.contributors {
     display: block;
   }
 
-  .navbar {
+  nav.navbar {
     // height: 0;
     position: relative;
     max-width: 100%;
@@ -537,6 +548,7 @@ section.contributors {
       background: #fff url("../img/background.png") top center repeat;
       background-size: cover;
       position: fixed;
+      padding: 25px 0px;
       z-index: 100;
       height: 100%;
     }
@@ -577,7 +589,7 @@ section.contributors {
   margin: 32px auto 55px;
 
   .item-wrapper {
-     flex: 3 3 165px;
+     flex: 1 1 165px;
 
      &:first-child {
        margin-right: -30px;
@@ -586,12 +598,12 @@ section.contributors {
 
      &:nth-child(2) {
        z-index: 2;
-       flex: 5 5 195px;
+       flex: 1 1 195px;
      }
 
     &:last-child {
       margin-left: -30px;
-      overflow: hidden;
+      overflow: visible;
     }
   }
 }
@@ -627,7 +639,7 @@ section.contributors {
 
   section.benefits {
     ul li img {
-      padding-right: 5px;
+      padding-right: 10px;
       width: 35px;
     }
 
@@ -649,5 +661,11 @@ section.contributors {
         margin-left: -40px;
       }
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .benefits li {
+    font-size: 16px;
   }
 }
