@@ -371,21 +371,38 @@ section.cards {
     }
   }
 
-  .modal.show {
+  .modal {
     .modal-dialog {
+      max-width: 350px;
+      margin: 3rem auto;
 
-      .close-icon {
-        align-self: flex-end;
-        padding: 20px 20px 0 0;
-      }
+      .modal-content {
+        background-color: transparent;
+        border: none;
 
-      .modal-body {
-        display: flex;
-        justify-content: center;
+        .close-icon {
+          // align-self: flex-end;
+          // padding: 20px 20px 0 0;
+          position: absolute;
+          background: #fff;
+          border-radius: 50%;
+          width: 26px;
+          padding: 2px;
+          border: 1px solid rgba(#000, 0.6);
+          z-index: 2;
+          top: -7px;
+          right: -7px;
+        }
 
-        img {
-          width: 90%;
-          max-width: 344px;
+        .modal-body {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+
+          img {
+            width: 100%;
+            max-width: 344px;
+          }
         }
       }
     }
