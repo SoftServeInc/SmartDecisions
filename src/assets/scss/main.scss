@@ -325,18 +325,18 @@ section.cards {
         position: relative;
         align-items: center;
         flex-wrap: nowrap;
-        left: -12.5%;
+        left: -8.33333%;
 
         .tab-card {
           position: relative;
 
 
           &.previous {
-            left: -12.5%;
+            left: -8.33333%;
           }
 
           &.next {
-            right: -12.5%;
+            right: -8.33333%;
           }
         }
       }
@@ -351,7 +351,7 @@ section.cards {
         top: 0;
         height: 100%;
         background: black;
-        width: 12.5%;
+        width: 8.33333%;
         transition: all 0.5s;
         cursor: pointer;
 

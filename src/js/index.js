@@ -28,8 +28,8 @@ $(document).ready(function(){
   function next() {
     if ($(':animated').length) { return null };
 
-    let leftStart = '-37.5%';
-    let leftEnd = '-12.5%';
+    let leftStart = '-25%';
+    let leftEnd = '-8.33333%';
 
     if($( window ).width() < 768) {
       leftStart = '-75%';
@@ -52,8 +52,8 @@ $(document).ready(function(){
   function previous() {
     if ($(':animated').length) { return null };
 
-    let leftStart = '12.5%';
-    let leftEnd = '-12.5%';
+    let leftStart = '8.33333%';
+    let leftEnd = '-8.33333%';
 
     if($( window ).width() < 768) {
       leftStart = '25%';
