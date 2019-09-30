@@ -18,6 +18,14 @@ $(document).ready(function(){
     },1000);
   });
 
+  $('#card .card-container .tab-card').attr('data-toggle', 'modal').attr('data-target', '#card-modal');
+
+  $("img.tab-card[data-target='#card-modal']").click(function(e) {
+    $('#card-modal .modal-body').html(
+      $('<img>', {src: e.target.src})
+    )
+  });
+
   function next() {
     if ($(':animated').length) { return null };
 
