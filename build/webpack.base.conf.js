@@ -5,13 +5,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-// Main const
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
 const DIST = path.join(__dirname, '../docs');
 const SOURCE = path.join(__dirname, "../src");
 
 module.exports = {
-  // BASE config
   entry: {
     app: SOURCE
   },
