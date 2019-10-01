@@ -7,7 +7,7 @@ npm start
 
 Project will be running at http://localhost:3000/
 
-# to create create production build 
+# To create create production build 
 
 npm i
 npm run-script build
