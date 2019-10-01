@@ -1,11 +1,13 @@
-# card-game
+# SmartDecisions
 
-#to run in development mode
+# To run in development mode
 
 npm i
 npm start
 
-#to create create production build 
+Project will be running at http://localhost:3000/
+
+# to create create production build 
 
 npm i
 npm run-script build
