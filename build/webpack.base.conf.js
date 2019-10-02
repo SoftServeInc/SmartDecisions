@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: DIST,
     publicPath: '',
-    filename: 'js/bundle.js'
+    filename: 'js/[name].bundle.[hash].js'
   },
   optimization: {
     splitChunks: {
@@ -34,7 +34,7 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
-    }, {
+    },{
       test: /\.(png|svg)$/,
       loader: 'url-loader',
       options: {
@@ -81,7 +81,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: path.join(DIST, "index.html"),
-      template: 'src/index.html'
+      template: 'src/index.ejs',
+      productionMode: false
     }),
     new CopyWebpackPlugin([
       { from: path.join(SOURCE, "assets", "img"), to: path.join(DIST, "img") },
