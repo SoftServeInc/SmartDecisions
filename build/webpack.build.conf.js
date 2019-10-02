@@ -12,7 +12,6 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: path.join(DIST, "index.html"),
       template: path.join(SOURCE, "index.ejs"),
-      favicon: path.join(SOURCE, "static", "favicon.png"),
       productionMode: true
     }),
   ]
