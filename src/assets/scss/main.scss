@@ -409,7 +409,6 @@ section.cards {
 
           img {
             width: 100%;
-            max-width: 344px;
           }
         }
       }
@@ -610,23 +609,36 @@ section.contributors {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  max-width: 570px;
+  max-width: 610px;
   margin: 32px auto 55px;
 
   .item-wrapper {
-     &:first-child {
-       margin-right: -10%;
-       overflow: hidden;
-     }
+    width: 50%;
 
-     &:nth-child(2) {
-       z-index: 2;
-       width: 40%;
-     }
+    &:first-child {
+      margin-right: -10%;
+      overflow: hidden;
+
+      img {
+       max-width: 80%
+      }
+    }
+
+    &:nth-child(2) {
+      z-index: 2;
+
+      img {
+        max-width: 100%
+      }
+    }
 
     &:last-child {
       margin-left: -10%;
       overflow: visible;
+
+      img {
+        max-width: 80%
+      }
     }
   }
 }
