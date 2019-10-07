@@ -7,13 +7,7 @@ body {
 
 .bg-pattern {
   background: url("../img/background.png") top center repeat;
-  background-size: contain;
-}
-
-@supports (-ms-ime-align:auto) {
-  .bg-pattern {
-      background-size: cover;
-  }
+  background-size: cover;
 }
 
 .burder-menu {
