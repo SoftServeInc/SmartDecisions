@@ -111,29 +111,29 @@ nav.navbar.navbar-expand-lg {
         padding-left: 0;
       }
     }
-
-    .links {
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
-
-      .email-us {
-        flex-basis: 180px;
-        margin-left: 20px;
-      }
-    }
   }
 
-  .download-link {
-    flex: 0 0 243px;
-    font-weight: normal;
-    background: #000;
-    padding-right: 46px;
-    padding-left: 46px;
-    text-decoration: none;
+  .links {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 
-    &:active, &:hover {
-      color: #fff;
+    .download-link {
+      flex: 0 0 243px;
+      font-weight: normal;
+      background: #000;
+      padding-right: 46px;
+      padding-left: 46px;
+      text-decoration: none;
+
+      &:active, &:hover {
+        color: #fff;
+      }
+    }
+
+    .email-us {
+      flex-basis: 180px;
+      margin-left: 20px;
     }
   }
 }
@@ -538,9 +538,10 @@ section.contributors {
     }
   }
 
-  .logo {
+  .contributors {
     text-align: center;
     padding: 52px 0 85px;
+    display: flex;
     align-items: stretch;
     justify-content: center;
 
@@ -548,10 +549,12 @@ section.contributors {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ccc;
+      background: #b5b5b5;;
+      flex: 0 0 25%;
+      margin: 0 10px;
 
       img {
-        width: 132px;
+        width: 100%;
       }
     }
   }
