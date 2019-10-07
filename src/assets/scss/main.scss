@@ -117,6 +117,17 @@ nav.navbar.navbar-expand-lg {
         padding-left: 0;
       }
     }
+
+    .links {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+
+      .email-us {
+        flex-basis: 180px;
+        margin-left: 20px;
+      }
+    }
   }
 
   .download-link {
@@ -125,7 +136,6 @@ nav.navbar.navbar-expand-lg {
     background: #000;
     padding-right: 46px;
     padding-left: 46px;
-    margin-left: auto;
     text-decoration: none;
 
     &:active, &:hover {
@@ -537,9 +547,18 @@ section.contributors {
   .logo {
     text-align: center;
     padding: 52px 0 85px;
+    align-items: stretch;
+    justify-content: center;
 
-    img {
-      width: 132px;
+    .contributor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ccc;
+
+      img {
+        width: 132px;
+      }
     }
   }
 }
@@ -576,29 +595,43 @@ section.contributors {
       z-index: 100;
       height: 100%;
     }
-  }
 
-  .navbar-collapse {
-    display: none;
+    .navbar-collapse {
+      display: none;
 
-    &.show {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: 100;
+      &.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
 
-      .navbar-nav {
-        .nav-item.nav-link {
-          border-right: none;
-          padding: 0 0 20px;
-        }
+        .navbar-nav {
+          .nav-item.nav-link {
+            border-right: none;
+            padding: 0 0 20px;
+          }
 
-        .btn-rounded.download-link {
-          margin: 0;
-          flex-basis: 35px;
+          .links {
+            flex-direction: column;
+            align-items: center;
+
+            .btn-rounded {
+              font-size: 14px;
+              line-height: 1;
+            }
+
+            .email-us {
+              margin-left: 0;
+              margin-top: 20px;
+            }
+          }
+
+          .btn-rounded.download-link {
+            flex-basis: 35px;
+          }
         }
       }
     }
