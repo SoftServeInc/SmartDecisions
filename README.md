@@ -8,7 +8,7 @@
 
 Project will be running at http://localhost:3000/
 
-### To create create production build 
+### To create production build 
 
 `$ npm i`
 
