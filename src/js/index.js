@@ -20,8 +20,8 @@ $(document).ready(function(){
   function next() {
     if ($(':animated').length) { return null };
 
-    let leftStart = '-25%';
-    let leftEnd = '-8.33333%';
+    var leftStart = '-25%';
+    var leftEnd = '-8.33333%';
 
     if($( window ).width() < 768) {
       leftStart = '-75%';
@@ -44,19 +44,19 @@ $(document).ready(function(){
   function previous() {
     if ($(':animated').length) { return null };
 
-    let leftStart = '8.33333%';
-    let leftEnd = '-8.33333%';
+    var leftStart = '8.33333%';
+    var leftEnd = '-8.33333%';
 
     if($( window ).width() < 768) {
       leftStart = '25%';
       leftEnd = '-25%';
     }
 
-    const parent = $('.tab-pane.show');
-    const container = parent.find('.content .card-container');
+    var parent = $('.tab-pane.show');
+    var container = parent.find('.content .card-container');
 
     parent.find('.controlls .previous').addClass('active');
-    const copy = parent.find('.content .card-container img').last().clone();
+    var copy = parent.find('.content .card-container img').last().clone();
     container.animate({ left: leftStart }, 500, function(){
       container.prepend(copy);
       container.find('img').last().remove();
@@ -74,14 +74,14 @@ $(document).ready(function(){
   })
 
   $("body").keydown(function(e) {
-    if ($('.modal.show').length) return null;
+    if ($('#card-modal.modal.show').length) return null;
 
     if (e.which === 37 ) previous();
     if (e.which === 39) next();
   })
 
   function shuffle(array) {
-    let tmp, current, top = array.length;
+    var tmp, current, top = array.length;
 
     if(top) while(--top) {
       current = Math.floor(Math.random() * (top + 1));
@@ -94,7 +94,7 @@ $(document).ready(function(){
   }
 
   $('#card .tab-pane .card-container').each(function() {
-    const shuffledImages = shuffle($(this).find('img.tab-card'));
+    var shuffledImages = shuffle($(this).find('img.tab-card'));
     $(this).html(shuffledImages);
   });
 
@@ -105,4 +105,6 @@ $(document).ready(function(){
       $('<img>', {src: e.target.src})
     )
   });
+
+
 });
