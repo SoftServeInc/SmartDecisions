@@ -29,10 +29,11 @@
               <a href="Software-Architecture-Design-Game.zip" download class="btn-rounded download-link">
                 download all
               </a>
-              <a href="mailto:hcm@xanum.uam.mx;kazman@hawaii.edu;ohrytsay@softserveinc.com;shaziyev@softserveinc.com?subject=Software%20Architecture%20Design%20Game"
-                class="btn-rounded download-link email-us">
+
+              <button type="button" class="btn-rounded download-link email-us" data-toggle="modal" data-target="#email-us">
                 Email us
-              </a>
+              </button>
+              <!-- <a href="mailto:hcm@xanum.uam.mx;kazman@hawaii.edu;ohrytsay@softserveinc.com;shaziyev@softserveinc.com?subject=Software%20Architecture%20Design%20Game" -->
             </div>
           </div>
           <img class='d-none close-icon' src="img/close-notification-icon.svg">
@@ -49,6 +50,17 @@
       <div class="with-styled-border"></div>
     </div>
     <div class="container">
+      <div class="modal fade form" id="email-us" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <img class='close-icon' src="img/close-notification-icon.svg" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-body">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdubkVdzMisSBhyulY7buPTxicv7WsxBUpNWrhqIZcPjlM1-w/viewform?embedded=true"
+                width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="header text-center">
         <h1 class="title">Smart Decisions</h1>
@@ -69,7 +81,6 @@
         <div class="btn-rounded bg-green">
           <a class="scroll" href="#about">discover</a>
         </div>
-
       </section>
     </div>
   </div>
@@ -78,7 +89,6 @@
     <div class="container">
       <section class="about" id="about">
         <h2 class="title">About</h2>
-        <h3 class="subtitle">Playing cards</h3>
         <div class="row card-info">
           <div class="card-item col-lg-3">
             <div class="about-img justify-content-center justify-content-lg-start">
@@ -149,11 +159,6 @@
 
     <section class="cards" id="card">
         <h2 class="title">Playing Cards</h2>
-        <!-- <h3 class="subtitle">
-          Green cards comprise a category of tasks that can be solved using ML.
-          </br>
-          They differ in the desired output of the ML system.
-        </h3> -->
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
@@ -333,12 +338,27 @@
             </div>
           </div>
         </div>
+
+        <div class="modal fade form" id="request-training" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <img class='close-icon' src="img/close-notification-icon.svg" class="close" data-dismiss="modal" aria-label="Close">
+              <div class="modal-body">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdubkVdzMisSBhyulY7buPTxicv7WsxBUpNWrhqIZcPjlM1-w/viewform?embedded=true"
+                  width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-rounded" data-toggle="modal" data-target="#request-training">
+          Request training
+        </button>
       </section>
 
     <div class="container">
       <section class="benefits" id="benefits">
         <h2 class="title">Benefits</h2>
-        <h3 class="subtitle">Red, Blue, and Green</h3>
         <div class="row benefits">
           <div class="col-md-6">
             <ul>
@@ -376,8 +396,32 @@
           download all
        </a>
       </section>
+
+      <section id="more">
+        <h2 class="title">Learn More</h2>
+        <div class="row align-items-center">
+          <div class="col-md-5 more-book-cover text-sm-center text-md-right">
+            <a href="https://www.amazon.com/Designing-Software-Architectures-Practical-Engineering/dp/0134390784/" target="_blank">
+              <img src="img/dsa_book_cover.jpg" class="pb-sm-4">
+            </a>
+          </div>
+          <div class="col-md-5 more-info offset-md-1">
+            <p>
+              SoftServe has contributed to the Software Industry Big Data Chapter in a Carnegie-Mellon SEI Series book.
+            </p>
+            <p>
+              If you want to learn more about the Attribute-Driven Design, check it out!
+            </p>
+          </div>
+        </div>
+        <a href="https://www.amazon.com/Designing-Software-Architectures-Practical-Engineering/dp/0134390784/"
+          class="btn-rounded" target="_blank">
+          view
+        </a>
+      </section>
     </div>
   </div>
+
 
   <div class="container-fluid bg-pattern">
     <div class="container">
