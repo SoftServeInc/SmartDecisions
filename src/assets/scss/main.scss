@@ -487,6 +487,7 @@ section#more {
   .more-info {
     font-family: "OpenSans";
     align-self: center;
+    margin-bottom: 90px;
   }
 
   .btn-rounded, .btn-rounded:hover {
@@ -692,8 +693,9 @@ section.contributors {
   .modal-dialog {
     max-width: 640px;
 
-    .modal-content .close-icon {
-      right: 20px;
+    .modal-content {
+      background-color: #fff;
+      padding-top: 20px;
     }
   }
 }
@@ -787,6 +789,10 @@ section.contributors {
         margin-left: -40px;
       }
     }
+  }
+
+  section#more .more-info {
+    margin-bottom: 0;
   }
 }
 
