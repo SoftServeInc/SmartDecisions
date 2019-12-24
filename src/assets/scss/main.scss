@@ -35,7 +35,6 @@ header .close-icon {
 }
 
 .btn-rounded {
-  flex: 0 0 243px;
   font-size: 18px;
   text-transform: uppercase;
   color: #ffffff;
@@ -104,7 +103,7 @@ header, footer {
         font-weight: normal;
         line-height: 1;
 
-        &:nth-child(4) {
+        &:nth-child(3) {
           border-right: none;
           padding-right: 0;
           white-space: nowrap;
@@ -121,22 +120,23 @@ header, footer {
       width: 100%;
       justify-content: flex-end;
 
-      .download-link {
-        flex: 0 0 243px;
+      .btn-rounded {
+        border-radius: 20px;
+        font-size: 14px;
         font-weight: normal;
         background: #000;
-        padding-right: 46px;
-        padding-left: 46px;
+        padding-right: 20px;
+        padding-left: 20px;
+        white-space: nowrap;
         text-decoration: none;
+
+        & + .btn-rounded {
+          margin-left: 10px;
+        }
 
         &:active, &:hover {
           color: #fff;
         }
-      }
-
-      .email-us {
-        flex-basis: 180px;
-        margin-left: 20px;
       }
     }
   }
@@ -217,7 +217,17 @@ section.about {
 
     .card-item {
       padding: 0 30px;
+
+      p a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+          color: #fff;
+        }
+      }
     }
+
     h3 {
       font-size: 24px;
       padding-bottom: 25px;
@@ -574,8 +584,10 @@ section.contributors {
 }
 
 @media (max-width: 992px) {
-  header .close-icon {
-    display: block;
+  header {
+    .close-icon {
+      display: block;
+    }
   }
 
   section.about {
@@ -593,7 +605,6 @@ section.contributors {
   }
 
   nav.navbar {
-    // height: 0;
     position: relative;
     max-width: 100%;
 
@@ -631,18 +642,12 @@ section.contributors {
             .btn-rounded {
               font-size: 14px;
               line-height: 1;
-            }
-
-            .email-us {
               margin-left: 0;
-              margin-top: 20px;
-              max-height: 35px;
-              width: 160px;
             }
-          }
 
-          .btn-rounded.download-link {
-            flex-basis: 35px;
+            .request {
+              margin: 20px 0;
+            }
           }
         }
       }
