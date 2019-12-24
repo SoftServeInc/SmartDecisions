@@ -35,7 +35,6 @@ header .close-icon {
 }
 
 .btn-rounded {
-  flex: 0 0 243px;
   font-size: 18px;
   text-transform: uppercase;
   color: #ffffff;
@@ -48,6 +47,7 @@ header .close-icon {
   border-radius: 40px;
   cursor: pointer;
   font-weight: normal;
+  border: none;
 
   &.bg-green {
     background-color: #00ae83;
@@ -106,6 +106,7 @@ header, footer {
         &:nth-child(3) {
           border-right: none;
           padding-right: 0;
+          white-space: nowrap;
         }
 
         &:first-child {
@@ -119,22 +120,23 @@ header, footer {
       width: 100%;
       justify-content: flex-end;
 
-      .download-link {
-        flex: 0 0 243px;
+      .btn-rounded {
+        border-radius: 20px;
+        font-size: 14px;
         font-weight: normal;
         background: #000;
-        padding-right: 46px;
-        padding-left: 46px;
+        padding-right: 20px;
+        padding-left: 20px;
+        white-space: nowrap;
         text-decoration: none;
+
+        & + .btn-rounded {
+          margin-left: 10px;
+        }
 
         &:active, &:hover {
           color: #fff;
         }
-      }
-
-      .email-us {
-        flex-basis: 180px;
-        margin-left: 20px;
       }
     }
   }
@@ -215,7 +217,17 @@ section.about {
 
     .card-item {
       padding: 0 30px;
+
+      p a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+          color: #fff;
+        }
+      }
     }
+
     h3 {
       font-size: 24px;
       padding-bottom: 25px;
@@ -278,11 +290,20 @@ section.instruction {
   height: 100%;
 }
 
-section.cards {
+section#card.cards {
   padding-top: 50px;
 
   h2 {
     color: #5854a1;
+  }
+
+  .btn-rounded, .btn-rounded:hover {
+    margin-top: 55px;
+    width: 250px;
+    background: #5854a1;
+    color: #fff;
+    text-decoration: none;
+    border-color: #5854a1;
   }
 
   .nav-tabs {
@@ -385,46 +406,10 @@ section.cards {
       }
     }
   }
-
-  .modal {
-    .modal-dialog {
-      max-width: 350px;
-      margin: 3rem auto;
-
-      .modal-content {
-        background-color: transparent;
-        border: none;
-
-        .close-icon {
-          position: absolute;
-          cursor: pointer;
-          background: #fff;
-          border-radius: 50%;
-          width: 26px;
-          padding: 2px;
-          border: 1px solid rgba(#000, 0.6);
-          z-index: 2;
-          top: -7px;
-          right: -7px;
-        }
-
-        .modal-body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0;
-
-          img {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
 }
 
 section.benefits {
-  padding: 50px 0 80px;
+  padding: 75px 0 80px;
 
   h2 {
     color: #94308e;
@@ -491,6 +476,41 @@ section.benefits {
     &:hover {
       text-decoration: none;
     }
+  }
+}
+
+section#more {
+  padding-bottom: 55px;
+
+  h2 {
+    color: #d06415;
+    padding-bottom: 30px;
+
+  }
+
+  .more-book-cover {
+    a {
+      padding: 10px 0;
+    }
+  }
+
+  .more-info {
+    font-family: "OpenSans";
+    align-self: center;
+    margin-bottom: 90px;
+  }
+
+  .btn-rounded, .btn-rounded:hover {
+    margin-top: 55px;
+    width: 200px;
+    background: #d06415;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  img {
+    filter: brightness(0.7);
+    height: 300px;
   }
 }
 
@@ -564,8 +584,10 @@ section.contributors {
 }
 
 @media (max-width: 992px) {
-  header .close-icon {
-    display: block;
+  header {
+    .close-icon {
+      display: block;
+    }
   }
 
   section.about {
@@ -583,7 +605,6 @@ section.contributors {
   }
 
   nav.navbar {
-    // height: 0;
     position: relative;
     max-width: 100%;
 
@@ -621,22 +642,19 @@ section.contributors {
             .btn-rounded {
               font-size: 14px;
               line-height: 1;
-            }
-
-            .email-us {
               margin-left: 0;
-              margin-top: 20px;
             }
-          }
 
-          .btn-rounded.download-link {
-            flex-basis: 35px;
+            .request {
+              margin: 20px 0;
+            }
           }
         }
       }
     }
   }
 }
+
 .top-carousel {
   display: flex;
   align-items: center;
@@ -671,6 +689,53 @@ section.contributors {
 
       img {
         max-width: 80%
+      }
+    }
+  }
+}
+
+.modal.form {
+  .modal-dialog {
+    max-width: 640px;
+
+    .modal-content {
+      background-color: #fff;
+      padding-top: 20px;
+    }
+  }
+}
+
+.modal {
+  .modal-dialog {
+    max-width: 350px;
+    margin: 3rem auto;
+
+    .modal-content {
+      background-color: transparent;
+      border: none;
+
+      .close-icon {
+        position: absolute;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 50%;
+        width: 26px;
+        padding: 2px;
+        border: 1px solid rgba(#000, 0.6);
+        z-index: 2;
+        top: -7px;
+        right: -7px;
+      }
+
+      .modal-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -729,6 +794,10 @@ section.contributors {
         margin-left: -40px;
       }
     }
+  }
+
+  section#more .more-info {
+    margin-bottom: 0;
   }
 }
 

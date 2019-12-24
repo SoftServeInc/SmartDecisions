@@ -82,7 +82,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: path.join(DIST, "index.html"),
       template: 'src/index.ejs',
-      favicon: path.join(SOURCE, "static", "favicon.png"),
       productionMode: false
     }),
     new CopyWebpackPlugin([
